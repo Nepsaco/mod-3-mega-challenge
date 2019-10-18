@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CatMatchr API</title>
+  </head>
+  <body>
+    <h1>CatMatchr API</h1>
+    <p>All authenticated endpoints should send a valid JWT token in the Authorization header (eg. <pre>Authorization: Bearer aaa.bbb.ccc</pre>). Tokens can be generated from the auth login endpoint.</p>
+    <h2>Endpoints</h2>
+    <section>
+      <h3>Breeds</h3>
+      <ul>
+        <li><pre>GET /breeds</pre></li>
+          <p>Authentication optional. If request is authenticated, it also returns whether or not a breed is a favorite.</p>
+      </ul>
+    </section>
+    <section>
+      <h3>Users</h3>
+      <ul>
+        <li>
+          <p><pre>POST /users</pre></p>
+          <p>Body is: <pre>{ username: "username", name: "name", password: "password" }</pre></p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3>Favorites</h3>
+      <ul>
+        <li>
+          <p><pre>POST /favorites</pre><p>
+          <p>Authenticated. Body is: <pre>{ user_id: 1, breed_id: 1 }</pre></p>
+        </li>
+        <li><pre>DELETE /favorites/{id}</pre></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Auth</h3>
+      <ul>
+        <li><pre>POST /login</pre></li>
+          <p>Body is: <pre>{ username: "username", password: "password" }</pre></p>
+      </ul>
+    </section>
+  </body>
+</html>

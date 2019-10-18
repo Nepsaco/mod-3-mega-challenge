@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Cat Matchr</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body>
+        <header>
+            <h1>CatMatchr</h1>
+            <p>Helping you identify your ideal cat</p>
+            <a href="/signup.html">Sign Up</a>
+            <p class="auth-status"></p>
+        </header>
+        <main>
+            <section>
+                <h2>Cat Breeds</h2>
+                <form>
+                    <fieldset>
+                        <label for="adaptability">Adaptability</label>
+                        <span>1<input id="adaptability" name="adaptability" type="range" min="1" max="5" value="1" />5</span>
+                    </fieldset>
+                    <fieldset>
+                        <label for="affection-level">Affection Level</label>
+                        <span>1<input id="affection-level" name="affection-level" type="range" min="1" max="5" value="1" />5</span>
+                    </fieldset>
+                    <fieldset>
+                        <label for="energy-level">Energy Level</label>
+                        <span>1<input id="energy-level" name="energy-level" type="range" min="1" max="5" value="1" />5</span>
+                    </fieldset>
+                    <fieldset>
+                        <label for="intelligence">Intelligence</label>
+                        <span>1<input id="intelligence" name="intelligence" type="range" min="1" max="5" value="1" />5</span>
+                    </fieldset>
+                </form>
+                <ul class="breeds"></ul>
+            </section>
+        </main>
+        <script type="module" src="/cats.js"></script>
+    </body>
+</html>
